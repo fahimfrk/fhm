@@ -155,17 +155,6 @@ a:hover {
     color: #282626;
 }
 
-.more-img {
-    height: 2rem;
-    width: 2rem;
-    object-fit: cover;
-    margin: auto;
-}
-
-.more-img:hover {
-    transform: translateY(-10px);
-    transition: all 0.4s ease;
-}
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -265,3 +254,12 @@ a:hover {
   }
   #prev1,#next2 { left: 10px; }
   #next1,#prev2 { right: 10px; }
+  .visit{
+    display:block;
+    margin:0 auto;
+    width:fit-content;
+  }
+  .visit:hover{
+    transform: translatey(-20px);
+    transition: all 0.4 ease;
+  }
