@@ -27,7 +27,7 @@
         <h1 class="wel">Hey there!</h1>
         
         <img class="pro" src="prop/WhatsApp Image 2025-07-06 at 10.58.58 AM.jpeg">
-        <h1 class="name">Muhammed Fahim </h1>
+        <h1 class="name">Muhammed Fahim Pk</h1>
       </div>
       <div class="main two">
       <h1 id="about-me">About me</h1>
@@ -46,20 +46,19 @@
 
       <div class="three">
         <h1 id="proj">Projects</h1>
-     <div class="skills-grid">
-      <div class="skill-card">
+     <div class="slider">
+      <div class="slides" id="slideContainer">
         <figure>
-          <img class="projectimg" src="https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png">
+          <img class="slides img" src="./prop/actionzone.jpeg">
           <figcaption>Web browsing</figcaption>
           </figure>
-          </div>
-         <div class="skill-card">
-        
-          <figure>
-          <img class="projectimg" src="https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png">
-          <figcaption>test.app</figcaption>
-          </figure>
+
+
+           <button class="btn" id="prev">&#10094;</button>
+           <button class="btn" id="next">&#10095;</button>
+      
           
+         
           </div>
           </div>
     
@@ -67,20 +66,15 @@
     
      <div class="four2">
        <h1 id="cert">Certifications</h1>
-       <div class="cert-grid">
-        <div class="cert-card">
+       <div class="slider">
+        <div class="slides" id="slideContainer">
           <figure>
-         <a href="https://drive.google.com/file/d/1f3MehODhw7mWw3tBPHwgQuFE6uXEihKC/view?usp=drivesdk"><img class="cimg" src="prop/cusat.jpg"></a>
+         <a href="https://drive.google.com/file/d/1f3MehODhw7mWw3tBPHwgQuFE6uXEihKC/view?usp=drivesdk"><img class="slides img" src="prop/cusat.jpg"></a>
           <figcaption>Space x</figcaption>
-          
           </figure>
-        </div>
-
-
-             <div class="more">
-            <figue>
-              <a href="#"><img src="prop/fast-foward.png" alt="next" class="more-img"></a>
-            </figue>
+             <button class="btn" id="prev">&#10094;</button>
+             <button class="btn" id="next">&#10095;</button>
+      
 
           </div>
 
@@ -109,5 +103,21 @@
     
      
     </footer>
+    <script>
+  let slideIndex = 0;
+  const slides = document.getElementById("slideContainer");
+  const totalSlides = slides.children.length;
+
+  function showSlide(index) {
+    slideIndex = (index + totalSlides) % totalSlides;
+    slides.style.transform = `translateX(${-slideIndex * 600}px)`;
+  }
+
+  document.getElementById("next").onclick = () => showSlide(slideIndex + 1);
+  document.getElementById("prev").onclick = () => showSlide(slideIndex - 1);
+
+  // Auto-slide every 3 seconds
+  setInterval(() => showSlide(slideIndex + 1), 3000);
+</script>
   </body>
 </html>
