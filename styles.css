@@ -236,7 +236,7 @@ a:hover {
   .slides img {
     width:600px;            /* same as slider width */
     height:100%;           /* same as slider height */
-    object-fit: contain;
+    object-fit: fit;
   }
 
   /* Navigation buttons */
